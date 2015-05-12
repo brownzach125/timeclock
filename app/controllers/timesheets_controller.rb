@@ -69,7 +69,7 @@ class TimesheetsController < ApplicationController
   def massExport
     employees = Employee.all
     payperiod = Payperiod.find_by_id(params[:pid])
-    zip_name = "timesheetsa_" + payperiod.file_print + ".zip"
+    zip_name = "timesheets_" + payperiod.file_print + ".zip"
     File.delete("./tmp/#{zip_name}") unless not File.exist?("./tmp/#{zip_name}")
     Zip::File.open("./tmp/#{zip_name}", Zip::File::CREATE) do |zipfile|
       employees.each_with_index do |e , i|
