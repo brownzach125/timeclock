@@ -23,11 +23,11 @@ team = [   {:name =>'Zach'    , :email => "brownzach125@gmail.com" } ,    {:name
            {:name =>'Garret'  , :email => "swamp.fox076@gmail.com"}  ,    {:name =>'Steven'    , :email => "redynsnevets@gmail.com", :admin => true},
 		       {:name =>'Employee', :email => "employee20156@gmail.com"}]
 
-admin = { :name =>'admin' , :email => 'admit20156@gmail.com' , :admin => true}
+admin = { :name =>'Liz Dickey' , :email => 'ed.hlth4all@gmail.com' , :admin => true}
 admin = Employee.create!(admin)
 
-supervisor = { :name =>'Im a supervisor' , :email => 'suadhealth@gmail.com' }
-Employee.create!(supervisor)
+#supervisor = { :name =>'Im a supervisor' , :email => 'suadhealth@gmail.com' }
+#Employee.create!(supervisor)
 
 team.each do |mate|
   admin.employees.create!( mate  )
